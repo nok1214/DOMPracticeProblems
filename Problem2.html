@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2</title>
+</head>
+<body>
+    <p>
+        <a id='link' href="http://www.google.com">Click the button below to see where you are going.</a>
+    </p>  
+    <button onclick="getLink()">Get Link</button>
+    <p id="p1"></p>
+<!-- use .getAttribute with the corresponding ID to get the correct attribute -->
+    <script>
+        function getLink(){
+            var showLink = document.getElementById('link').getAttribute('href');
+            document.getElementById('p1').innerHTML = showLink;
+        }        
+    </script>
+</body>
+</html>

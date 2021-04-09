@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 4</title>
+</head>
+<body>
+    <p>Choose your drink</p>
+    <select id="drinks">
+        <option value="Coca-Cola">Coca-Cola</option>
+        <option value="Pepsi">Pepsi</option>
+        <option value="Mountain Dew">Mountain Dew</option>
+        <option value="Water">Water</option>
+
+    </select>
+    <input type="button" onclick="getOptions()" value="Count and Output all items">
+    <script>
+    function getOptions(){
+        var myDrinks= document.getElementById("drinks")
+        var displayText = "No. of items in dropdown is : ";
+      itemList = document.getElementById("drinks").length;  
+      displayText = displayText + itemList;
+      for (var i=0; i<myDrinks.length;i++)
+        {
+          displayText = displayText + "\n" + myDrinks.options[i].text;
+        }
+      alert(displayText);
+      }
+    </script> 
+
+</body>
+</html>
